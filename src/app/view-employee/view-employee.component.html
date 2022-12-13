@@ -1,0 +1,65 @@
+<app-admin-nav></app-admin-nav>
+<table class="table">
+
+    <thead>
+
+      <tr>
+
+        <th scope="col">Employee code</th>
+
+        <th scope="col">Name</th>
+
+        <th scope="col">Designation</th>
+
+        <th scope="col">Salary</th>
+
+        <th scope="col">Phone</th>
+
+        <th scope="col">Email</th>
+
+        <th scope="col">Username</th>
+
+        <th scope="col">Password</th>
+
+        <th scope="col">Confirm password</th>
+
+        
+
+
+      </tr>
+
+    </thead>
+
+    <tbody>
+
+      <tr *ngFor="let i of employee">
+
+        <td>{{i.empCode}}</td>
+
+        <td>{{i.name}}</td>
+
+        <td>{{i.designation}}</td>
+
+        <td>{{i.salary}}</td>
+
+        <td>{{i.phone}}</td>
+
+        <td>{{i.email}}</td>
+
+        <td>{{i.username}}</td>
+
+        <td>{{i.password}}</td>
+
+        <td>{{i.confirmPassword}}</td>
+
+       
+
+
+
+      </tr>
+
+   
+
+    </tbody>
+
+  </table>
