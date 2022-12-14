@@ -68,6 +68,21 @@ export class ApiService {
     return this.http.post("http://localhost:8080/viewSecurityProfile",dataToSend)
   }
 
+  applyLeave=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/addLeave",dataToSend)
+  }
+
+  viewLeave=()=>
+  {
+    return this.http.get("http://localhost:8080/viewAllLeaves")
+  }
+
+  leaveStatus=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/updateStatus",dataToSend)
+  }
+
 
 
 }
