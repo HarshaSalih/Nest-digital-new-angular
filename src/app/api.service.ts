@@ -38,6 +38,36 @@ export class ApiService {
     return this.http.post("http://localhost:8080/viewProfile",dataToSend)
   }
 
+  securityLogin=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/securityLogin",dataToSend)
+  }
+
+  addSecurity=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/addSecurity",dataToSend)
+  }
+
+  searchSecurity=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/searchSecurity",dataToSend)
+  }
+
+  deleteSecurity=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/deleteSecurity",dataToSend)
+  }
+
+  viewSecurity=()=>
+  {
+    return this.http.get("http://localhost:8080/viewSecurity")
+  }
+
+  viewProfileSecurity=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/viewSecurityProfile",dataToSend)
+  }
+
 
 
 }
