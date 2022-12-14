@@ -11,7 +11,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { SearchEmployeeComponent } from './search-employee/search-employee.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AdminNavComponent } from './admin-nav/admin-nav.component';
-import { ViewEmployeeComponent } from './view-employee/view-employee.component'
+import { ViewEmployeeComponent } from './view-employee/view-employee.component';
+import { EmployeeLoginComponent } from './employee-login/employee-login.component';
+import { ViewProfileEmployeeComponent } from './view-profile-employee/view-profile-employee.component';
+import { EmployeeNavComponent } from './employee-nav/employee-nav.component'
 
 const myRoute:Routes=[
   {
@@ -19,12 +22,12 @@ const myRoute:Routes=[
     component:AdminLoginComponent
   },
   {
-    path:"addemployee",
-    component:AddEmployeeComponent
+    path:"employeelogin",
+    component:EmployeeLoginComponent
   },
   {
-    path:"addsecurity",
-    component:AddSecurityComponent
+    path:"addemployee",
+    component:AddEmployeeComponent
   },
   {
     path:"searchemployee",
@@ -33,6 +36,10 @@ const myRoute:Routes=[
   {
     path:"viewemployee",
     component:ViewEmployeeComponent
+  },
+  {
+    path:"viewprofileemployee",
+    component:ViewProfileEmployeeComponent
   }
 
   // {
@@ -49,7 +56,10 @@ const myRoute:Routes=[
     AddSecurityComponent,
     SearchEmployeeComponent,
     AdminNavComponent,
-    ViewEmployeeComponent
+    ViewEmployeeComponent,
+    EmployeeLoginComponent,
+    ViewProfileEmployeeComponent,
+    EmployeeNavComponent
   ],
   imports: [
     BrowserModule,
