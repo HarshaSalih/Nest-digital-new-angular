@@ -1,0 +1,55 @@
+<app-employee-nav></app-employee-nav>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3 mt-4">
+                
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                    <h2>APPLY LEAVE</h2>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Employee id</label>
+                    <input name="empId" [(ngModel)]="empId" type="text" class="form-control">
+
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Leave type</label>
+                    <select name="type" [(ngModel)]="type" id="" class="form-control">
+                        <option value="Sick leave">Sick leave</option>
+                        <option value="Casual leave">Casual leave</option>
+                        <option value="Special leave">Special leave</option>
+                    </select>
+
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Remarks</label>
+                    <input name="remarks" [(ngModel)]="remarks" type="text" class="form-control">
+
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">From date</label>
+                    <input name="fromDate" [(ngModel)]="fromDate" type="date" class="form-control">
+                </div>
+
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">To date</label>
+                    <input name="toDate" [(ngModel)]="toDate" type="date" class="form-control">
+                </div>
+
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Apply date</label>
+                    <input name="applyDate" [(ngModel)]="applyDate" type="date" class="form-control">
+                </div>
+
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Status</label>
+                    <input name="status" [(ngModel)]="status" type="text" class="form-control">
+                </div>
+
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                    <button (click)="readValues()" class="btn btn-success">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
