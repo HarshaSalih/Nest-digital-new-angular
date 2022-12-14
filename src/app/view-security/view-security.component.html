@@ -1,0 +1,40 @@
+<app-admin-nav></app-admin-nav>
+<table class="table">
+
+    <thead>
+
+      <tr>
+
+        <th scope="col">Employee code</th>
+
+        <th scope="col">Name</th>
+
+        <th scope="col">Username</th>
+
+        <th scope="col">Password</th>
+
+        
+    </tr>
+
+    </thead>
+
+    <tbody>
+
+      <tr *ngFor="let i of security">
+
+        <td>{{i.empCode}}</td>
+
+        <td>{{i.name}}</td>
+
+       <td>{{i.username}}</td>
+
+        <td>{{i.password}}</td>
+
+    </tr>
+
+   
+
+    </tbody>
+
+  </table>
+

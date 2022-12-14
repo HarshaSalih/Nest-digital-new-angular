@@ -14,7 +14,12 @@ import { AdminNavComponent } from './admin-nav/admin-nav.component';
 import { ViewEmployeeComponent } from './view-employee/view-employee.component';
 import { EmployeeLoginComponent } from './employee-login/employee-login.component';
 import { ViewProfileEmployeeComponent } from './view-profile-employee/view-profile-employee.component';
-import { EmployeeNavComponent } from './employee-nav/employee-nav.component'
+import { EmployeeNavComponent } from './employee-nav/employee-nav.component';
+import { SecurityLoginComponent } from './security-login/security-login.component';
+import { SearchSecurityComponent } from './search-security/search-security.component';
+import { ViewSecurityComponent } from './view-security/view-security.component';
+import { ViewProfileSecurityComponent } from './view-profile-security/view-profile-security.component';
+import { SecurityNavComponent } from './security-nav/security-nav.component'
 
 const myRoute:Routes=[
   {
@@ -40,12 +45,27 @@ const myRoute:Routes=[
   {
     path:"viewprofileemployee",
     component:ViewProfileEmployeeComponent
+  },
+  {
+    path:"securitylogin",
+    component:SecurityLoginComponent
+  },
+  {
+    path:"addsecurity",
+    component:AddSecurityComponent
+  },
+  {
+    path:"searchsecurity",
+    component:SearchSecurityComponent
+  },
+  {
+    path:"viewsecurity",
+    component:ViewSecurityComponent
+  },
+  {
+    path:"viewprofilesecurity",
+    component:ViewProfileSecurityComponent
   }
-
-  // {
-  //   path:"addsecurity",
-  //   component:AddSecurityComponent
-  // }
 ]
 
 @NgModule({
@@ -59,7 +79,12 @@ const myRoute:Routes=[
     ViewEmployeeComponent,
     EmployeeLoginComponent,
     ViewProfileEmployeeComponent,
-    EmployeeNavComponent
+    EmployeeNavComponent,
+    SecurityLoginComponent,
+    SearchSecurityComponent,
+    ViewSecurityComponent,
+    ViewProfileSecurityComponent,
+    SecurityNavComponent
   ],
   imports: [
     BrowserModule,
