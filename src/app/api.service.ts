@@ -83,6 +83,37 @@ export class ApiService {
     return this.http.post("http://localhost:8080/updateStatus",dataToSend)
   }
 
+  addEmployeeLog=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/logEmployee",dataToSend)
+  }
+
+  viewEmployeeLog=()=>
+  {
+    return this.http.get("http://localhost:8080/viewAllEmployeeLog")
+  }
+
+  viewDailyEmployeeLog=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/viewDailyEmployeeLog",dataToSend)
+  }
+
+  addVisitorLog=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/logVisitor",dataToSend)
+  }
+
+  viewVisitorLog=()=>
+  {
+    return this.http.get("http://localhost:8080/viewAllVisitorLog")
+  }
+
+  viewDailyVisitorLog=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/viewDailyVisitorLog",dataToSend)
+  }
+
+
 
 
 }

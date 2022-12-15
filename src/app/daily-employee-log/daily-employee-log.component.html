@@ -1,0 +1,43 @@
+<app-security-nav></app-security-nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3 mt-4">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+                    <label for="" class="form-label">Date</label>
+                    <input type="date" name="date" [(ngModel)]="date" class="form-control">
+
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                    
+                    <button (click)="readValues()" class="btn btn-success">Search</button>
+                </div>
+            </div>
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">EmpId</th>
+                <th scope="col">Date</th>
+                <th scope="col">Entry date time</th>
+                <th scope="col">Exit date time</th>
+               
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let i of searchData">
+                <td>{{i.empId}}</td>
+                <td>{{i.date}}</td>
+                <td>{{i.enterDateTime}}</td>
+                <td>{{i.exitDateTime}}</td>
+               
+              </tr>
+            </tbody>
+          </table>
+            
+
+        </div>
+    </div>
+</div>

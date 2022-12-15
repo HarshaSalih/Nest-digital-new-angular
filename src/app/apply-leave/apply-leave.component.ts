@@ -14,11 +14,11 @@ export class ApplyLeaveComponent {
   fromDate=""
   toDate=""
   applyDate=""
-  status=""
+  
   constructor(private api:ApiService){}
   readValues=()=>
   {
-    let data:any={"empId":this.empId,"type":this.type,"remarks":this.remarks,"fromDate":this.fromDate,"toDate":this.toDate,"applyDate":this.applyDate,"status":this.status}
+    let data:any={"empId":this.empId,"type":this.type,"remarks":this.remarks,"fromDate":this.fromDate,"toDate":this.toDate,"applyDate":this.applyDate}
     console.log(data)
     this.api.applyLeave(data).subscribe(
       (response:any)=>
@@ -32,7 +32,7 @@ export class ApplyLeaveComponent {
           this.fromDate=""
           this.toDate=""
           this.applyDate=""
-          this.status=""
+         
 
         } else {
           alert("Something went wrong")

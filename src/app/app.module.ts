@@ -23,6 +23,12 @@ import { SecurityNavComponent } from './security-nav/security-nav.component';
 import { ApplyLeaveComponent } from './apply-leave/apply-leave.component';
 import { ViewLeaveComponent } from './view-leave/view-leave.component';
 import { LeaveStatusComponent } from './leave-status/leave-status.component';
+import { EmployeeLogComponent } from './employee-log/employee-log.component';
+import { VisitorLogComponent } from './visitor-log/visitor-log.component';
+import { ViewEmployeeLogComponent } from './view-employee-log/view-employee-log.component';
+import { DailyEmployeeLogComponent } from './daily-employee-log/daily-employee-log.component';
+import { DailyVisitorLogComponent } from './daily-visitor-log/daily-visitor-log.component';
+import { ViewVisitorLogComponent } from './view-visitor-log/view-visitor-log.component';
 
 
 const myRoute:Routes=[
@@ -81,6 +87,30 @@ const myRoute:Routes=[
   {
     path:"leavestatus",
     component:LeaveStatusComponent
+  },
+  {
+    path:"employeelog",
+    component:EmployeeLogComponent
+  },
+  {
+    path:"viewemployeelog",
+    component:ViewEmployeeLogComponent
+  },
+  {
+    path:"dailyemployeelog",
+    component:DailyEmployeeLogComponent
+  },
+  {
+    path:"visitorlog",
+    component:VisitorLogComponent
+  },
+  {
+    path:"viewvisitorlog",
+    component:ViewVisitorLogComponent
+  },
+  {
+    path:"dailyvisitorlog",
+    component:DailyVisitorLogComponent
   }
 
   
@@ -106,6 +136,12 @@ const myRoute:Routes=[
     ApplyLeaveComponent,
     ViewLeaveComponent,
     LeaveStatusComponent,
+    EmployeeLogComponent,
+    VisitorLogComponent,
+    ViewEmployeeLogComponent,
+    DailyEmployeeLogComponent,
+    DailyVisitorLogComponent,
+    ViewVisitorLogComponent,
     
   ],
   imports: [
