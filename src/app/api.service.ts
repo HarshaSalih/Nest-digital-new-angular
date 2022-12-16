@@ -75,7 +75,12 @@ export class ApiService {
 
   viewLeave=()=>
   {
-    return this.http.get("http://localhost:8080/viewAllLeaves")
+    return this.http.get("http://localhost:8080/viewAllLeave")
+  }
+
+  updateLeave=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/updateStatus",dataToSend)
   }
 
   leaveStatus=(dataToSend:any)=>
