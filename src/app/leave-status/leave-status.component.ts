@@ -8,11 +8,58 @@ import { ApiService } from '../api.service';
 })
 export class LeaveStatusComponent {
 
+
+  // empId:any=""
+
+  // searchData:any=[]
+
+  // constructor(private api:ApiService){
+
+  //   this.empId=localStorage.getItem("userInfo")
+
+  // }
+
+ 
+
+  // readValue=()=>
+
+  // {
+
+  //   let data:any={"empId":this.empId}
+
+  //   console.log(data)
+
+  //   this.api.searchStatus(data).subscribe(
+
+  //     (response:any)=>
+
+  //     {
+
+  //      this.searchData=response
+
+       
+
+  //     }
+
+  //   )
+
+  // }
+
+  // data:any=[]
+
+  constructor(private api:ApiService){
+
+    this.empId=localStorage.getItem("userInfo")
+    api.viewLeave().subscribe(
+      (response:any)=>
+      {
+        this.data=response
+      }
+    )
+  }
+
 empId:any=""
 searchData:any=[]
-constructor(private api:ApiService){
-  this.empId=localStorage.getItem("userInfo")
-}
 
 readValue=()=>
 {
@@ -27,5 +74,4 @@ readValue=()=>
   )
 }
 data:any=[]
-
 }
