@@ -1,1 +1,44 @@
 <app-employee-nav></app-employee-nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+            <div class="row g-3 mt-4">
+
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+
+                    <label for="" class="form-label"><h2>LEAVE STATUS</h2> </label>
+                    
+
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+                   
+                    <label for="" class="form-label"><h5>CLICK HERE</h5> </label>
+
+                </div>
+                
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+                    <button (click)="readValue()" class="btn btn-success">Status</button>
+
+                </div>
+            
+            
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center" *ngFor="let i of searchData">
+
+                    <label for="" class="form-label"><b>Leave Status</b></label>
+                    <input type="text" class="form-control" *ngIf="i.status==1;else rejected" value="Accepted">
+                    <ng-template #rejected>
+                        <input type="text" class="form-control" value="Rejected">
+                    </ng-template>
+
+
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
