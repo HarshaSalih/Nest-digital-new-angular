@@ -8,17 +8,19 @@ import { ApiService } from '../api.service';
 })
 export class ApplyLeaveComponent {
 
-  empId=""
+  empId:any=""
   type=""
   remarks=""
   fromDate=""
   toDate=""
-  applyDate=""
+  // applyDate=""
   
-  constructor(private api:ApiService){}
+  constructor(private api:ApiService){
+    this.empId=localStorage.getItem("userInfo")
+  }
   readValues=()=>
   {
-    let data:any={"empId":this.empId,"type":this.type,"remarks":this.remarks,"fromDate":this.fromDate,"toDate":this.toDate,"applyDate":this.applyDate}
+    let data:any={"empId":this.empId,"type":this.type,"remarks":this.remarks,"fromDate":this.fromDate,"toDate":this.toDate}
     console.log(data)
     this.api.applyLeave(data).subscribe(
       (response:any)=>
@@ -31,7 +33,7 @@ export class ApplyLeaveComponent {
           this.remarks=""
           this.fromDate=""
           this.toDate=""
-          this.applyDate=""
+          // this.applyDate=""
          
 
         } else {

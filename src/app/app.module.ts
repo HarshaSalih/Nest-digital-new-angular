@@ -96,6 +96,7 @@ const myRoute:Routes=[
     path:"leavestatus",
     component:LeaveStatusComponent
   },
+
   {
     path:"employeelog",
     component:EmployeeLogComponent

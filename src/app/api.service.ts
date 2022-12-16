@@ -83,9 +83,14 @@ export class ApiService {
     return this.http.post("http://localhost:8080/updateStatus",dataToSend)
   }
 
-  leaveStatus=(dataToSend:any)=>
+  searchStatus=(dataToSend:any)=>
   {
-    return this.http.post("http://localhost:8080/updateStatus",dataToSend)
+    return this.http.post("http://localhost:8080/searchStatus",dataToSend)
+  }
+
+  acceptLeave=(data:any)=>
+  {
+    return this.http.post("http://localhost:8080/accept",data)
   }
 
   addEmployeeLog=(dataToSend:any)=>
