@@ -20,4 +20,52 @@ export class ViewLeaveComponent {
   }
 
   leaves:any=[]
-}
+  statusvalue:any={}
+  readValue=(data:any)=>
+  {
+    this.statusvalue=1;
+    let accept:any={"empId":data,"status":this.statusvalue}
+    this.api.updateLeave(accept).subscribe(
+      (response:any)=>
+      {
+        if (response.status=="success") {
+          console.log(response)
+          console.log(response.status)
+          alert("success")
+          
+        } else {
+          alert("failed")
+          
+        }
+      }
+
+    )
+  }
+
+  rejectValue=(data:any)=>{
+
+    this.statusvalue=-1;
+    let accept:any={"empId":data,"status":this.statusvalue}
+    this.api.updateLeave(accept).subscribe(
+      (response:any)=>
+      {
+        if (response.status=="success") {
+          console.log(response)
+          console.log(response.status)
+          alert("success")
+          
+        } else {
+          alert("failed")
+          
+        }
+      }
+
+    )
+  }
+
+
+ 
+  }
+
+
+

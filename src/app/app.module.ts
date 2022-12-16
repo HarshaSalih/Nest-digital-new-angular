@@ -29,11 +29,19 @@ import { ViewEmployeeLogComponent } from './view-employee-log/view-employee-log.
 import { DailyEmployeeLogComponent } from './daily-employee-log/daily-employee-log.component';
 import { DailyVisitorLogComponent } from './daily-visitor-log/daily-visitor-log.component';
 import { ViewVisitorLogComponent } from './view-visitor-log/view-visitor-log.component';
+import { LogNavComponent } from './log-nav/log-nav.component';
+import { HomeComponent } from './home/home.component';
+import { HomeNavComponent } from './home-nav/home-nav.component';
 
 
 const myRoute:Routes=[
+
   {
     path:"",
+    component:HomeComponent
+  },
+  {
+    path:"adminlogin",
     component:AdminLoginComponent
   },
   {
@@ -142,6 +150,9 @@ const myRoute:Routes=[
     DailyEmployeeLogComponent,
     DailyVisitorLogComponent,
     ViewVisitorLogComponent,
+    LogNavComponent,
+    HomeComponent,
+    HomeNavComponent,
     
   ],
   imports: [
