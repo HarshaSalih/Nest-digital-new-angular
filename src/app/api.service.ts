@@ -93,6 +93,16 @@ export class ApiService {
     return this.http.post("http://localhost:8080/accept",data)
   }
 
+  leavePending=(data:any)=>
+  {
+    return this.http.post("http://localhost:8080/updatecounter",data)
+  }
+
+  viewLeavePending=(data:any)=>
+  {
+    return this.http.post("http://localhost:8080/viewPendingLeaves",data)
+  }
+
   addEmployeeLog=(dataToSend:any)=>
   {
     return this.http.post("http://localhost:8080/logEmployee",dataToSend)

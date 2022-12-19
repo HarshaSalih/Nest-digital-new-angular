@@ -31,7 +31,9 @@ export class ViewLeaveComponent {
         if (response.status=="success") {
           console.log(response)
           console.log(response.status)
+          
           alert("success")
+
           
         } else {
           alert("failed")

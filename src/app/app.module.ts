@@ -32,6 +32,7 @@ import { ViewVisitorLogComponent } from './view-visitor-log/view-visitor-log.com
 import { LogNavComponent } from './log-nav/log-nav.component';
 import { HomeComponent } from './home/home.component';
 import { HomeNavComponent } from './home-nav/home-nav.component';
+import { LeavePendingComponent } from './leave-pending/leave-pending.component';
 
 
 const myRoute:Routes=[
@@ -98,6 +99,11 @@ const myRoute:Routes=[
   },
 
   {
+    path:"leavepending",
+    component:LeavePendingComponent
+  },
+
+  {
     path:"employeelog",
     component:EmployeeLogComponent
   },
@@ -154,6 +160,7 @@ const myRoute:Routes=[
     LogNavComponent,
     HomeComponent,
     HomeNavComponent,
+    LeavePendingComponent,
     
   ],
   imports: [
